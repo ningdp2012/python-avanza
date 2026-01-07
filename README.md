@@ -3,7 +3,7 @@
 [![PyPI version](https://badge.fury.io/py/python-avanza.svg)](https://pypi.org/project/python-avanza/)
 [![Python versions](https://img.shields.io/pypi/pyversions/python-avanza.svg)](https://pypi.org/project/python-avanza/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/python-avanza)](https://pepy.tech/project/python-avanza)
+[![Downloads](https://img.shields.io/pypi/dm/python-avanza)](https://pypi.org/project/python-avanza/)
 
 A simple Python client for Avanza's unofficial API with a yfinance-style interface.
 
