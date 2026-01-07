@@ -1,9 +1,9 @@
 name: Publish to PyPI
 
 on:
-  workflow_dispatch:  # Manual trigger only
-  # release:
-  #   types: [created]  # Uncomment to enable automatic publishing on releases
+  workflow_dispatch:
+  release:
+    types: [created]
 
 jobs:
   publish:
