@@ -112,6 +112,8 @@ See [example.py](example.py) for complete working examples.
 # Clone and install
 git clone git@github.com:ningdp2012/python-avanza.git
 cd python-avanza
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -e ".[dev]"
 ```
 
