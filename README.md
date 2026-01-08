@@ -110,8 +110,8 @@ See [example.py](example.py) for complete working examples.
 **Setup:**
 ```bash
 # Clone and install
-git clone https://github.com/de-ping/avanza.git
-cd avanza
+git clone git@github.com:ningdp2012/python-avanza.git
+cd python-avanza
 pip install -e ".[dev]"
 ```
 
