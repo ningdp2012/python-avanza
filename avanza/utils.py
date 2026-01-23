@@ -27,9 +27,7 @@ def convert_instrument_type(instrument_type):
             return InstrumentType(instrument_type.lower())
         except ValueError:
             valid_options = [t.value for t in InstrumentType]
-            raise ValueError(
-                f"Invalid instrument type: {instrument_type}. Valid options: {valid_options}"
-            )
+            raise ValueError(f"Invalid instrument type: {instrument_type}. Valid options: {valid_options}")
     return instrument_type
 
 

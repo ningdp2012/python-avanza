@@ -81,9 +81,7 @@ class AvanzaClient:
         logger.debug(f"Making {method} request to {url}")
 
         try:
-            response = self.session.request(
-                method=method, url=url, json=data, params=params, timeout=self.timeout
-            )
+            response = self.session.request(method=method, url=url, json=data, params=params, timeout=self.timeout)
             response.raise_for_status()
             logger.debug(f"Request successful: {method} {url} - Status {response.status_code}")
             return response.json()
@@ -129,11 +127,7 @@ class AvanzaClient:
             instrument_type = convert_instrument_type(instrument_type)
 
             # ETF needs to be mapped to EXCHANGE_TRADED_FUND for the search API
-            search_type = (
-                "EXCHANGE_TRADED_FUND"
-                if instrument_type == InstrumentType.ETF
-                else instrument_type.upper()
-            )
+            search_type = "EXCHANGE_TRADED_FUND" if instrument_type == InstrumentType.ETF else instrument_type.upper()
             search_types = [search_type]
 
         data = {
@@ -155,9 +149,7 @@ class AvanzaClient:
         """
         return self._make_request(
             "GET",
-            Endpoints.INSTRUMENT.format(
-                instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id
-            ),
+            Endpoints.INSTRUMENT.format(instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id),
         )
 
     def get_stock_details(self, orderbook_id: str) -> dict[str, Any]:
@@ -172,9 +164,7 @@ class AvanzaClient:
         """
         return self._make_request(
             "GET",
-            Endpoints.INSTRUMENT_DETAILS.format(
-                instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id
-            ),
+            Endpoints.INSTRUMENT_DETAILS.format(instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id),
         )
 
     def get_etf_info(self, orderbook_id: str) -> dict[str, Any]:
@@ -219,14 +209,10 @@ class AvanzaClient:
         """
         return self._make_request(
             "GET",
-            Endpoints.INSTRUMENT_PRICE.format(
-                instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id
-            ),
+            Endpoints.INSTRUMENT_PRICE.format(instrument_type=InstrumentType.STOCK.value, orderbook_id=orderbook_id),
         )
 
-    def get_instrument_chart(
-        self, orderbook_id: str, time_period: TimePeriod | str
-    ) -> dict[str, Any]:
+    def get_instrument_chart(self, orderbook_id: str, time_period: TimePeriod | str) -> dict[str, Any]:
         """
         Get quote/chart information for an instrument (stock or ETF)
 
@@ -247,9 +233,7 @@ class AvanzaClient:
             ),
         )
 
-    def get_instrument_dividend(
-        self, orderbook_id: str, instrument_type: InstrumentType | str
-    ) -> dict[str, Any]:
+    def get_instrument_dividend(self, orderbook_id: str, instrument_type: InstrumentType | str) -> dict[str, Any]:
         """
         Get dividend information for a stock or ETF
 

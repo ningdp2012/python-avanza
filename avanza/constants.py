@@ -46,13 +46,11 @@ class Endpoints:
     INSTRUMENT = "/market-guide/{instrument_type}/{orderbook_id}"
     INSTRUMENT_DETAILS = "/market-guide/{instrument_type}/{orderbook_id}/details"
     INSTRUMENT_PRICE = "/market-guide/{instrument_type}/{orderbook_id}/quote"
-    INSTRUMENT_CHART = (
-        "/price-chart/{instrument_type}/{orderbook_id}?timePeriod={time_period}&resolution=day"
+    INSTRUMENT_CHART = "/price-chart/{instrument_type}/{orderbook_id}?timePeriod={time_period}&resolution=day"
+    INSTRUMENT_CHART_CUSTOM = (
+        "/price-chart/{instrument_type}/{orderbook_id}?from={from_date}&to={to_date}&resolution=day"  # noqa: E501
     )
-    INSTRUMENT_CHART_CUSTOM = "/price-chart/{instrument_type}/{orderbook_id}?from={from_date}&to={to_date}&resolution=day"  # noqa: E501
-    INSTRUMENT_DIVIDENDS = (
-        "/price-chart/{instrument_type}/{orderbook_id}/dividends?timePeriod={time_period}"
-    )
+    INSTRUMENT_DIVIDENDS = "/price-chart/{instrument_type}/{orderbook_id}/dividends?timePeriod={time_period}"
     ETF = "/market-etf/{orderbook_id}"
     ETF_DETAILS = "/market-etf/{orderbook_id}/details"
     FUND = "/fund-guide/guide/{orderbook_id}"
