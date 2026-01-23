@@ -2,11 +2,13 @@
 Unit tests for Avanza client
 """
 
-import pytest
 from unittest.mock import Mock, patch
+
+import pytest
 import requests
+
 from avanza.client import AvanzaClient
-from avanza.exceptions import AvanzaAPIError, AvanzaRateLimitError, AvanzaNetworkError
+from avanza.exceptions import AvanzaAPIError, AvanzaNetworkError, AvanzaRateLimitError
 
 
 class TestAvanzaClient:

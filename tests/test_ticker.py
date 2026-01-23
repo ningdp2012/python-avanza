@@ -2,9 +2,11 @@
 Unit tests for ticker classes
 """
 
-import pytest
 from unittest.mock import Mock, patch
-from avanza.ticker import Stock, ETF, Fund, search
+
+import pytest
+
+from avanza.ticker import ETF, Fund, Stock, search
 from avanza.utils import InfoDict
 
 

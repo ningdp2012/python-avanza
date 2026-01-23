@@ -3,9 +3,10 @@ Main Avanza API client for handling requests
 """
 
 import logging
+from typing import Any
+
 import requests
 from requests.adapters import HTTPAdapter
-from typing import Any
 from urllib3.util.retry import Retry
 
 from .constants import Endpoints, InstrumentType, TimePeriod

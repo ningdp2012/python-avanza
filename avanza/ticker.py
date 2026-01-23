@@ -2,9 +2,11 @@
 Ticker classes for yfinance-style interface
 """
 
-import pandas as pd
 from time import time
 from typing import Any
+
+import pandas as pd
+
 from .client import AvanzaClient
 from .constants import TimePeriod
 from .utils import InfoDict

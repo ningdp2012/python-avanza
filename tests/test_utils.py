@@ -3,12 +3,13 @@ Unit tests for utility functions
 """
 
 import pytest
+
+from avanza.constants import InstrumentType, TimePeriod
 from avanza.utils import (
+    InfoDict,
     convert_instrument_type,
     convert_time_period,
-    InfoDict,
 )
-from avanza.constants import InstrumentType, TimePeriod
 
 
 class TestConverters:
